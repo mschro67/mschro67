@@ -15,4 +15,4 @@ try:
 except ModuleNotFoundError:
   print("Module not found!")
 except Exception as e:
-  print(f"Error {e}")
+  print(f"Error {e}!")
