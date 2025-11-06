@@ -1,12 +1,12 @@
 #by mschro67
 
 while True:
-    try:
-        points=float(input("Your points: "))
-        max=float(input("Maximum points: "))
+  try:
+    points=float(input("Your points: "))
+    max=float(input("Maximum points: "))
 
-        print(f"{points}/{max} points: {points/max*100}%")
-        break
-    except:
-        print("Only type numbers!")
-        print()
+    print(f"{points}/{max} points: {points/max*100}%")
+    break
+  except:
+    print("Only type numbers!")
+    print()
