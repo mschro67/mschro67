@@ -11,6 +11,6 @@ try:
     led.toggle
     sleep(0.2)
 except ModuleNotFoundError:
-  print("Module(s) not found")
+  print("Module(s) not found!")
 except Exception as e:
-  print(f"Error: {e}")
+  print(f"Error: {e}!")
