@@ -1,18 +1,70 @@
+#forms v2.0
 #by mschro67
 
-try:
-  import turtle
-  t=turtle.Turtle()
+config = {
+    "scope" : 500,
+    "wait" : 1,
+    "speed" : 400,
+    "needMoreThan3Edges" : True,
+    "useTime" : True,
+    "tellAboutHelp" : True,
+    "showErrors" : True,
+    "tellAboutCreator" : True
+}
 
-  while True:
-    t.reset()
-    a=int(input("Length: "))
-    b=int(input("Edges: "))
-    for i in range(b):
-      t.forward(a)
-      t.left(360/b)
-    print()
+if config["tellAboutCreator"]:
+    print("This programm was made by mschro67.")
+
+if config["tellAboutHelp"]:
+    print("Type \"help\" to get more information.")
+
+try:
+    from turtle import Turtle
+    
+    if config["useTime"]:
+        try:
+            print()
+            from time import sleep
+        except ModuleNotFoundError:
+            if config["showErrors"]:
+                print("module \"time\" not found!")
+            useTime = False
+
+    turtle = Turtle()
+    turtle.speed=config["speed"]
+
+    while True:
+        turtle.reset()
+        print()
+        if config["useTime"]:
+            sleep(0.1)
+        
+        try:
+            i = input("> ")
+            match i:
+                case "help":
+                    print("This programm generates a form based on the number of edges, you enter.\nEnter the number of edges you want, after the \">\" or enter \"exit\" to exit the programm.")
+                    continue
+                case "exit":
+                    exit(0)
+
+            i=int(i)
+            if ["needMoreThan3Edges"] and i<3:
+                print("there cant be less than 3 edges")
+                continue
+            
+            turtle.backward(config["scope"]/i/2)
+            for x in range(i):
+                turtle.forward(config["scope"]/i)
+                turtle.left(360/i)
+            
+            if useTime:
+                sleep(config["wait"])
+        except Exception as e:
+            if config["showErrors"]:
+                print(f"{e}!")
+
 except ModuleNotFoundError:
-  print("Module not found!")
-except Exception as e:
-  print(f"Error {e}!")
+    if config["showErrors"]:
+        print("module \"time\" not found!")
+    exit(1)
