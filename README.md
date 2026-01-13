@@ -1,1 +1,1 @@
-In this branch you will only find my codes for microcontrollers.
+This branch only contains code for microcontrollers.
