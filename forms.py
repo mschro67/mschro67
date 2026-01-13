@@ -66,5 +66,7 @@ try:
 
 except ModuleNotFoundError:
     if config["showErrors"]:
-        print("module \"time\" not found!")
+        print("module \"turtle\" not found!")
+    exit(1)
+except:
     exit(1)
