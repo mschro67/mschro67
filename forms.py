@@ -1,4 +1,4 @@
-#forms v2.0
+#forms v2.0.1
 #by mschro67
 
 config = {
@@ -58,7 +58,7 @@ try:
                 turtle.forward(config["scope"]/i)
                 turtle.left(360/i)
             
-            if useTime:
+            if config["useTime"]:
                 sleep(config["wait"])
         except Exception as e:
             if config["showErrors"]:
