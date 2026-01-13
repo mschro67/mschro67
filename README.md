@@ -1,1 +1,1 @@
-In this branch are general python codes.
+This branch is for general python codes.
