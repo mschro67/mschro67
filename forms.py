@@ -28,7 +28,7 @@ try:
         except ModuleNotFoundError:
             if config["showErrors"]:
                 print("module \"time\" not found!")
-            useTime = False
+            config["useTime"] = False
 
     turtle = Turtle()
     turtle.speed=config["speed"]
