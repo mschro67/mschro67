@@ -1,4 +1,4 @@
-#forms v2.0.2
+#forms v2.0.3
 #by mschro67
 
 config = {
