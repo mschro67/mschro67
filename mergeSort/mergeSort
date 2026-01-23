@@ -1,0 +1,41 @@
+import math
+
+def merge(a1,a2):
+    p1=0
+    p2=0
+    a=[]
+    
+    while p1<len(a1) and p2<len(a2):
+        if a1[p1]<a2[p2]:
+            a.append(a1[p1])
+            p1+=1
+        else:
+            a.append(a2[p2])
+            p2+=1
+
+    if p1<len(a1):
+        a.append(a1[p1])
+    elif p2<len(a2):
+        a.append(a2[p2])
+
+    return a
+
+def mergeSort(a):
+    if len(a)==1:
+        return a
+
+    l1=math.ceil(len(a)/2)
+    l2=math.floor(len(a)/2)
+
+    a1=[]
+    a2=[]
+
+    for x in range(l1):
+        a1.append(a[x])
+    
+    for x in range(l2):
+        a2.append(a[x+l1])
+    
+    sorted=merge(mergeSort(a1),mergeSort(a2))
+
+    return sorted
