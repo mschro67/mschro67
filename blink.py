@@ -5,7 +5,7 @@ try:
   from machine import Pin
   from time import sleep
 
-  led=Pin(25,Pin.OUT)
+  led=Pin(25,Pin.OUT) #onboard led on RPI Pico 2
 
   while True:
     led.toggle
