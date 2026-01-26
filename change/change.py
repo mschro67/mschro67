@@ -1,5 +1,4 @@
 #by mschro67
-#v2
 
 #pin 0-4: led
 
@@ -16,3 +15,4 @@ with open("change/number.txt","r") as d:
     with open("change/number.txt","w") as b:
 
         b.write(str(a))
+
