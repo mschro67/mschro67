@@ -1,5 +1,5 @@
 #by mschro67
-#use on microcontroller with WLAN chip
+#for microcontroller with WLAN chip
 
 import network
 import socket
