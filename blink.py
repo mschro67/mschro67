@@ -1,6 +1,8 @@
 #by mschro67
 #for Raspberry Pi Pico
 
+#pin 25: led
+
 try:
   from machine import Pin
   from time import sleep
