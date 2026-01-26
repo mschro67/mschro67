@@ -1,5 +1,7 @@
 #by mschro67
 
+#pin 1: led
+
 from machine import Pin
 
 with open("toggle/value.txt","r") as r:
@@ -11,4 +13,5 @@ with open("toggle/value.txt","r") as r:
         Pin(1,Pin.OUT).value(0)
         with open("toggle/value.txt","w") as w:
             w.write("1")
+
 
