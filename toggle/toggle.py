@@ -1,5 +1,4 @@
 #by mschro67
-#use on the RP2040
 
 from machine import Pin
 
@@ -12,3 +11,4 @@ with open("toggle/value.txt","r") as r:
         Pin(1,Pin.OUT).value(0)
         with open("toggle/value.txt","w") as w:
             w.write("1")
+
