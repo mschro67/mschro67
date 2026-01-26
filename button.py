@@ -11,6 +11,6 @@ button=Pin(23,Pin.IN,Pin.PULL_UP)
 led=Pin(25,Pin.OUT)
 
 while True:
-  if button.value() == 0:
+  if button.value() == 0: #0 = pressed
     led.toggle()
     sleep(0.3)
