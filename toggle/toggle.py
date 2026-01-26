@@ -1,17 +1,7 @@
 #by mschro67
 
-#pin 1: led
+#pin 0: led
 
 from machine import Pin
 
-with open("toggle/value.txt","r") as r:
-    if int(r.read())==1:
-        Pin(1,Pin.OUT).value(1)
-        with open("toggle/value.txt","w") as w:
-            w.write("0")
-    else:
-        Pin(1,Pin.OUT).value(0)
-        with open("toggle/value.txt","w") as w:
-            w.write("1")
-
-
+Pin(0,Pin.OUT).toggle()
