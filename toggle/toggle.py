@@ -1,6 +1,10 @@
+#by mschro67
+#use on the RP2040
+
 from machine import Pin
-with open("toggle/value.txt","r") as v:
-    if int(v.read())==1:
+
+with open("toggle/value.txt","r") as r:
+    if int(r.read())==1:
         Pin(1,Pin.OUT).value(1)
         with open("toggle/value.txt","w") as w:
             w.write("0")
