@@ -1,5 +1,8 @@
 #by mschro67
-#use at the Orpheus Pico
+#for the Orpheus Pico
+
+#pin 23: button
+#pin 25: led
 
 from machine import Pin
 from time import sleep
