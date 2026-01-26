@@ -1,6 +1,8 @@
 #by mschro67
 #v2
 
+#pin 0-4: led
+
 from machine import Pin
 
 with open("change/number.txt","r") as d:
@@ -12,4 +14,5 @@ with open("change/number.txt","r") as d:
     else:
         Pin(a,Pin.OUT).toggle()
     with open("change/number.txt","w") as b:
+
         b.write(str(a))
