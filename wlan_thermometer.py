@@ -1,10 +1,10 @@
 #by mschro67
-#for microcontroller with WLAN chip
+#needs: WLAN,temperature sensor
 
 import network
 import socket
-import time
-from machine import I2C,Pin,ADC
+from time import sleep
+from machine import ADC
 
 sensor_temp = ADC(4)
 conversion_factor = 3.3 / (65535)
@@ -24,7 +24,7 @@ ap.config(essid=essid, password=password)
 ap.active(True)
 
 while not ap.active():
-  time.sleep(1)
+  sleep(1)
 
 print("activated acces point")
 print(f"ip-adress: {ap.ifconfig()[0]}")
